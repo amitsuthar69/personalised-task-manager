@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import { AuthProvider } from "./Providers";
 import "./globals.css";
 import type { Metadata } from "next";
 
@@ -16,7 +17,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <Header />
-        {children}
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );

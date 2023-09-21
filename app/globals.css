@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .bottom-border {
+        @apply hover:border-b border-blue-700 hover:cursor-pointer dark:hover:border-[violet];
+    }
+    .dark-scheme {
+        @apply dark:bg-[#1F1B24] shadow-purple-500/50;
+    }
+    .error-message {
+        @apply bg-red-500 w-fit text-xs px-3 py-1 rounded-md mt-1;
+    }
+}
+
+input {
+    @apply md:w-[400px] border-b border-purple-500 py-1 px-2 bg-gray-200 dark:bg-[#1F1B24];
+}

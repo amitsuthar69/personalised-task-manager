@@ -21,6 +21,7 @@ export default function Header() {
           <div className="flex gap-3 items-center">
             <ThemeButton />
             <Image
+              className="hover:cursor-pointer"
               src="/weather.svg"
               alt="weather_svg"
               width={25}
@@ -28,6 +29,7 @@ export default function Header() {
               priority
             />
             <Image
+              className="hover:cursor-pointer"
               onClick={handleHamburgerMenuClick}
               src="/user.svg"
               alt="user_svg"
