@@ -5,6 +5,7 @@ import Image from "next/image";
 import Providers from "./Providers";
 import ThemeButton from "./ThemeButton";
 import DropDownMenu from "./DropDownMenu";
+import Link from "next/link";
 
 export default function Header() {
   const [isDropdownMenuVisible, setIsDropdownMenuVisible] = useState(false);
@@ -20,23 +21,27 @@ export default function Header() {
           <h1 className="text-xl md:text-3xl text-white">Task Manager</h1>
           <div className="flex gap-3 items-center">
             <ThemeButton />
-            <Image
-              className="hover:cursor-pointer"
-              src="/weather.svg"
-              alt="weather_svg"
-              width={25}
-              height={25}
-              priority
-            />
-            <Image
-              className="hover:cursor-pointer"
-              onClick={handleHamburgerMenuClick}
-              src="/user.svg"
-              alt="user_svg"
-              width={25}
-              height={25}
-              priority
-            />
+            <Link href={`/weather`}>
+              <Image
+                className="hover:cursor-pointer"
+                src="/weather.svg"
+                alt="weather_svg"
+                width={25}
+                height={25}
+                priority
+              />
+            </Link>
+              <Link href={`/`}>
+                <Image
+                  className="hover:cursor-pointer"
+                  onClick={handleHamburgerMenuClick}
+                  src="/user.svg"
+                  alt="user_svg"
+                  width={25}
+                  height={25}
+                  priority
+                />
+              </Link>
           </div>
         </nav>
         <div className="absolute right-0">

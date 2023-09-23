@@ -1,5 +1,6 @@
 "use client";
 
+import Credentials from "next-auth/providers/credentials";
 import { signIn } from "next-auth/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -23,6 +24,9 @@ export default function LoginForm() {
       });
       if (res && res.error) {
         setError("Invalid Credentials");
+        // console.log(res);
+        // console.log(res.error);
+        // console.log(Credentials);
         return;
       }
 
