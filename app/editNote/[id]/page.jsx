@@ -3,7 +3,7 @@ import NoteHeader from "@/components/NoteHeader";
 
 const getNoteById = async (id) => {
   try {
-    const res = await fetch(`http://localhost:3000/api/notes/${id}`, {
+    const res = await fetch(`/api/notes/${id}`, {
       cache: "no-store",
     });
 
